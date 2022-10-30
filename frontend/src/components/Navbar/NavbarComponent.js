@@ -3,7 +3,6 @@ import axios from 'axios'
 import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { store } from '../../App'
-import logo from '../../images/navbarlogo.png'
 
 const NavbarComponent = () => {
 const {token,profile,setProfile} = useContext(store)
