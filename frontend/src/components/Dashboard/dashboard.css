@@ -1,0 +1,12 @@
+.short:hover {
+	cursor: pointer !important;
+}
+.short{
+	color: rgb(30, 131, 238) !important;
+}
+.table{
+	display: block !important;
+	overflow-x: auto !important;
+	width: 100% !important;
+  }
+ 
