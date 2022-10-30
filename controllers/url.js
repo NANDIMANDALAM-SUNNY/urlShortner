@@ -1,11 +1,16 @@
 const ShortUrl = require('../models/shortUrl')
 
 const getUrls = async (req,res) =>{
-    const shortUrls = await ShortUrl.find()    
-    res.send( {
-         data: shortUrls,
-         succesCode : 200 
-        });
+    try{
+        const shortUrls = await ShortUrl.find()    
+        res.send( { data: shortUrls, succesCode : 200  });
+    }
+
+    catch(err){
+        res.send({statusCode:500,message:"internal  server error"})
+    }
+
+ 
 }
 
 const postUrl = async (req,res) =>{
@@ -23,11 +28,16 @@ const postUrl = async (req,res) =>{
 }
 
 const getShortUrl = async (req,res)=>{
+    try {
     const shortUrl = await ShortUrl.findOne({ short: req.params.shortUrl })
     if (shortUrl == null) return res.send({statusCode:404,message:"Invalid Url"})
     shortUrl.clicks++
     shortUrl.save()
-    res.redirect(shortUrl.full)
+    res.redirect(shortUrl.full)   
+    } catch (error) {
+        res.send({statusCode:500,message:"internal  server error"})
+    }
+
 }
 
 module.exports={getUrls, postUrl, getShortUrl}
