@@ -57,7 +57,7 @@ const sendResetpasswordMail = async (name,email,token)=>{
          service:'gmail',
          auth:{
              user:'n.sunny170@gmail.com',
-             pass:'goaqvmnboxeuqxuo'
+             pass:'wqphqdbwmuupixnn'
          },
          tls:{
              rejectUnauthorized:false
