@@ -6,7 +6,7 @@ const registerMail = async (name,email,confirmationToken)=>{
          service:'gmail',
          auth:{
              user:'n.sunny170@gmail.com',
-             pass:'goaqvmnboxeuqxuo'
+             pass:'wqphqdbwmuupixnn'
          },
          tls:{
              rejectUnauthorized:false
