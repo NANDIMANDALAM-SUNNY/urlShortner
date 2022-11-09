@@ -69,7 +69,7 @@ const sendResetpasswordMail = async (name,email,token)=>{
              to: email,
              subject: "Reset Password",
              text: "Hello world?", // plain text body
-             html: `<p>Hiii ${name},Please copy the link  <a href="http://localhost:3000/resetpassword/${token}"  target=_blank>click here </a>  and reset your password</p> `
+             html: `<p>Hiii ${name},Please copy the link  <a href="https://guvi-task-day38-urlshortner.netlify.app/resetpassword/${token}"  target=_blank>click here </a>  and reset your password</p> `
      }
       transporter.sendMail(mailOptions, function(error, response) {
                   if (error) {
